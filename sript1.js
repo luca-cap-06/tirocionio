@@ -2,10 +2,11 @@
 
 let a = [12,5,6,42,2];
 console.log(a)
-let somma = 0;
-for (i = 0; i < a.length; i++ ){
-    somma += a[i];
-}
+
+//for (i = 0; i < a.length; i++ ){
+//    somma += a[i];
+//}
+somma = a.reduce((acc,sum) => acc + sum,0)
 console.log(somma)
 
 
