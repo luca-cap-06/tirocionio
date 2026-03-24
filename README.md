@@ -7,43 +7,144 @@ function getPastEvent() {
             if (Math.random() < 0.2) {
         return reject(new Error("Connessione instabile, impossibile recuperare l'evento."));
       }
-            const events = [``
-                { year: 1990, name: "World Wide Web Invented" },
-                { year: 2001, name: "Wikipedia Launched" },
-                { year: 1969, name: "Moon Landing" },
-                { year: 2020, name: "Global Pandemic" },
-                { year: 1989, name: "Fall of Berlin Wall" }
-            ]
+            const events = [
+                { "year": 1066, "name": "Battle of Hastings" },
+                { "year": 1492, "name": "Columbus Discovers America" },
+                { "year": 1776, "name": "American Declaration of Independence" },
+                { "year": 1789, "name": "French Revolution Begins" },
+                { "year": 1804, "name": "Napoleon Becomes Emperor" },
+                { "year": 1865, "name": "Abolition of Slavery in the US" },
+                { "year": 1914, "name": "World War I Begins" },
+                { "year": 1917, "name": "Russian Revolution" },
+                { "year": 1920, "name": "Women Gain Right to Vote in US" },
+                { "year": 1929, "name": "Stock Market Crash" },
+                { "year": 1939, "name": "World War II Begins" },
+                { "year": 1945, "name": "End of World War II" },
+                { "year": 1947, "name": "India Gains Independence" },
+                { "year": 1953, "name": "DNA Double Helix Discovered" },
+                { "year": 1955, "name": "Rosa Parks Sparks Bus Boycott" },
+                { "year": 1957, "name": "Sputnik Launched" },
+                { "year": 1963, "name": "Martin Luther King's 'I Have a Dream'" },
+                { "year": 1969, "name": "Moon Landing" },
+                { "year": 1971, "name": "Email First Used" },
+                { "year": 1973, "name": "First Mobile Phone Call" },
+                { "year": 1975, "name": "Microsoft Founded" },
+                { "year": 1976, "name": "Apple Founded" },
+                { "year": 1980, "name": "CNN Launched" },
+                { "year": 1983, "name": "Internet Protocol Introduced" },
+                { "year": 1986, "name": "Chernobyl Disaster" },
+                { "year": 1989, "name": "Fall of Berlin Wall" },
+                { "year": 1990, "name": "World Wide Web Invented" },
+                { "year": 1991, "name": "Collapse of Soviet Union" },
+                { "year": 1995, "name": "Windows 95 Released" },
+                { "year": 1997, "name": "Deep Blue Beats Kasparov" },
+                { "year": 1998, "name": "Google Founded" },
+                { "year": 2001, "name": "Wikipedia Launched" },
+                { "year": 2004, "name": "Facebook Founded" },
+                { "year": 2005, "name": "YouTube Launched" },
+                { "year": 2007, "name": "First iPhone Released" },
+                { "year": 2008, "name": "Global Financial Crisis" },
+                { "year": 2009, "name": "Bitcoin Created" },
+                { "year": 2010, "name": "Instagram Launched" },
+                { "year": 2012, "name": "Curiosity Rover Lands on Mars" },
+                { "year": 2014, "name": "Ebola Outbreak in West Africa" },
+                { "year": 2015, "name": "Paris Climate Agreement Signed" },
+                { "year": 2016, "name": "Brexit Referendum" },
+                { "year": 2017, "name": "Me Too Movement Goes Viral" },
+                { "year": 2018, "name": "First Image of a Black Hole" },
+                { "year": 2019, "name": "Notre-Dame Cathedral Fire" },
+                { "year": 2020, "name": "Global Pandemic" },
+                { "year": 2021, "name": "COVID-19 Vaccine Rollout" },
+                { "year": 2022, "name": "Russia Invades Ukraine" },
+                { "year": 2023, "name": "ChatGPT Becomes Public" },
+                { "year": 2024, "name": "First Commercial Space Hotel Announced" },
+                { "year": 2025, "name": "Breakthrough in Fusion Energy" },
+                { "year": 2026, "name": "Mars Colony Plans Finalized" },
+                { "year": 2027, "name": "AI Passes Turing Test" },
+                { "year": 2028, "name": "Global Internet via Satellite" },
+                { "year": 2029, "name": "First Human Cloned" },
+                { "year": 2030, "name": "Climate Neutral Europe" },
+                { "year": 2031, "name": "Virtual Reality Education Becomes Norm" },
+                { "year": 2032, "name": "Medical Nanobots Used in Surgery" },
+                { "year": 2033, "name": "First Ocean Cleanup Completed" },
+                { "year": 2034, "name": "Quantum Internet Launched" },
+                { "year": 2035, "name": "Hyperloop Public Transport Begins" },
+                { "year": 2036, "name": "AI Judges Begin Trial Use" },
+                { "year": 2037, "name": "First Fully Automated City" },
+                { "year": 2038, "name": "End of Fossil Fuel Era Declared" },
+                { "year": 2039, "name": "Ocean Colonies Established" },
+                { "year": 2040, "name": "Global Digital Currency Adopted" },
+                { "year": 2041, "name": "AI-Powered Governments" },
+                { "year": 2042, "name": "Universal Basic Income Introduced Globally" },
+                { "year": 2043, "name": "Space Elevator Begins Operation" },
+                { "year": 2044, "name": "Global Language Translation Implants" },
+                { "year": 2045, "name": "End of Physical Classrooms" },
+                { "year": 2046, "name": "First Terraforming on Mars" },
+                { "year": 2047, "name": "Global Water Crisis Solved" },
+                { "year": 2048, "name": "Earthquake Prediction Systems Activated" },
+                { "year": 2049, "name": "Climate Migration Peaks" },
+                { "year": 2050, "name": "World Population Stabilizes" },
+                { "year": 2051, "name": "AI Creates New Scientific Theory" },
+                { "year": 2052, "name": "Major City Relocated Due to Climate" },
+                { "year": 2053, "name": "Robots Gain Legal Personhood" },
+                { "year": 2054, "name": "First Contact with Alien Life" },
+                { "year": 2055, "name": "Memory Transfer Becomes Possible" },
+                { "year": 2056, "name": "Earth Protected by Climate Shield" },
+                { "year": 2057, "name": "Neural Interface Replaces Smartphones" },
+                { "year": 2058, "name": "Earthquake-Proof Cities Completed" },
+                { "year": 2059, "name": "Mind-Uploaded Humans Debut" },
+                { "year": 2060, "name": "Human-AI Symbiosis Achieved" },
+                { "year": 2061, "name": "Halley's Comet Returns" },
+                { "year": 2062, "name": "First AI-Directed Space Mission" },
+                { "year": 2063, "name": "Universal Translator Achieves 100% Accuracy" },
+                { "year": 2064, "name": "World Celebrates Peace Century" },
+                { "year": 2065, "name": "Artificial Consciousness Recognized" },
+                { "year": 2066, "name": "Mars Becomes Self-Sustaining Colony" },
+                { "year": 2067, "name": "Earth's Oldest Tree Preserved Forever" },
+                { "year": 2068, "name": "Artificial Gravity Invented" },
+                { "year": 2069, "name": "100th Anniversary of the Moon Landing" }
+            ];
 
             const randomIndex = Math.floor(Math.random() * events.length);
             resolve(events[randomIndex]);
         }, Math.random() * 1000);
     });
 }
-async function travelTroughHistory(n) {
-    // gestire errori con try-catch e Promise.allSetled
+console.log("un attimo di pazienza... il caricamento è abbastanza lungo");
+async function travelTroughHistory() {
+    const lunghezza = 95;
+    const eventsMap = new Map();
     try {
-        // Genera eventi storici in parallelo
-        const promises = [...Array(n)].map(() => getPastEvent());
-        // Attende che le promesse siano risolte o rifiutate
+    // Recupera eventi finché non sono 95
+    while (eventsMap.size < lunghezza) {
+        const rimasti = lunghezza - eventsMap.size;
+        const promises = Array.from({ length: rimasti }, () => getPastEvent());
         const  risultato = await Promise.allSettled(promises);
-        const events = risultato
-        // filtro per quelli risolti con successo
-            .filter(result => result.status === "fulfilled")
-            .map(({ value }) => value);
-        // map per rimuovere duplicati, ordinarli e filtrarli per anno
-       const unicoEvento =[...new Map(events.map(event => [`${event.name}-${event.year}`, event])).values()]
-        .filter(events => events.year < 2000).sort((a, b) => a.year - b.year);    
-            return unicoEvento;
-    // Gestione degli errori
+        risultato.forEach((result) => {
+            if (result.status === "fulfilled") {
+                const event = result.value;
+                eventsMap.set(`${event.name}-${event.year}`, event);
+            }
+        });
+    }
+        return Array.from(eventsMap.values())
+        .sort((a, b) => a.year - b.year);
+        // Gestione degli errori
     } catch (error) {
         console.log(error);
     }
      
 }
 // Esempio prova
-travelTroughHistory(10).then(events => {
-    console.log("Eventi storici ordinati per anno:");
-    events.forEach(event => console.log(`- ${event.name} (${event.year})`));
-});
+travelTroughHistory().then(events => {
+    console.log(`${events.length} eventi ordinati per anno:`);
+ 
+    let newEvents = events.map((event) => {
+        return {
+            name: event.name,
+            year: event.year
+        }
+    });
+    console.table(newEvents);
+}); 
 ```
